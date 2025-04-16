@@ -61,6 +61,10 @@ PrefabInstance:
       value: Car Red
       objectReference: {fileID: 0}
     - target: {fileID: 7495443279060062592, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7495443279060062592, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
@@ -152,24 +156,37 @@ MonoBehaviour:
   inputController: {fileID: 0}
   rb: {fileID: 7514724142118017493}
   wheels:
-  - axelType: 0
+  - wheelAxelType: 0
     wheelTransform: {fileID: 3811981105198623479}
     wheelCollider: {fileID: 2737710317085372627}
-  - axelType: 0
+    wheelDefaultStiffness: 1
+  - wheelAxelType: 0
     wheelTransform: {fileID: 965434436988013767}
     wheelCollider: {fileID: 4810446887963501108}
-  - axelType: 1
+    wheelDefaultStiffness: 1
+  - wheelAxelType: 1
     wheelTransform: {fileID: 9207640297257862619}
     wheelCollider: {fileID: 3164543666836587937}
-  - axelType: 1
+    wheelDefaultStiffness: 1
+  - wheelAxelType: 1
     wheelTransform: {fileID: 11607767811549944}
     wheelCollider: {fileID: 1071991078959207046}
+    wheelDefaultStiffness: 1
+  carDriveType: 0
+  carMass: 1000
+  wheelMass: 35
+  frontWheelTraction: 1
+  backWheelTraction: 1
   turnSenstivity: 30
   maxSpeed: 10
   accelerationSpeed: 5
   motorForce: 1500
-  brakeSensitivity: 10
+  frontBrakeSensitivity: 5
+  backBrakeSensitivity: 5
   brakePower: 6000
+  frontDriftFactor: 0.55
+  backDriftFactor: 0.45
+  driftDuration: 0.8
 --- !u!4 &3811981105198623479 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3794951908810334882, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
